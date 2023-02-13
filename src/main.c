@@ -1,45 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap_function_4.c                               :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vtheobal <vtheobal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/03 16:19:37 by vtheobal          #+#    #+#             */
-/*   Updated: 2021/10/03 16:19:38 by vtheobal         ###   ########.fr       */
+/*   Created: 2021/10/01 11:41:06 by vtheobal          #+#    #+#             */
+/*   Updated: 2021/10/03 16:21:23 by vtheobal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-int	ft_isdigit(char	*c)
+int	main(int argc, char **argv)
 {
-	int		a;
+	t_data	*a_stack;
+	t_data	*b_stack;
+	int		i;
 
-	if (*c == '-' && c[1] == '\0')
+	if (argc >= 2)
 	{
-		ft_putstr_fd("Error\n", 1);
-		exit(0);
-	}
-	while (*c != '\0')
-	{
-		a = *c;
-		if ((a < 48 || a > 57) && a != 45)
+		i = 1;
+		while (i < argc)
 		{
-			ft_putstr_fd("Error\n", 1);
-			exit(0);
+			parser(&a_stack, argv[i]);
+			i++;
 		}
-		c++;
+		indexing(&a_stack);
+		if (!sort_check(&a_stack))
+			exit(0);
+		sequence(&a_stack);
+		sort_boll_1(&a_stack);
+		ft_algo(&a_stack, &b_stack);
 	}
-	return (1);
-}
-
-void	check_dup(int dup, int a)
-{
-	(void)dup;
-	if (a == 1)
-	{
-		ft_putstr_fd("Error\n", 1);
-		exit(0);
-	}
+	return (0);
 }

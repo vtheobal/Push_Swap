@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap_function_2.c                               :+:      :+:    :+:   */
+/*   ft_swap_function_2_bonus.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vtheobal <vtheobal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 11:37:29 by vtheobal          #+#    #+#             */
-/*   Updated: 2021/10/03 16:19:16 by vtheobal         ###   ########.fr       */
+/*   Updated: 2021/10/02 17:52:18 by vtheobal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-void	ft_pb(t_data **a_stack, t_data **b_stack)
+void	pb_bonus(t_data **a_stack, t_data **b_stack)
 {
 	t_data	*tmp;
 
@@ -20,7 +20,6 @@ void	ft_pb(t_data **a_stack, t_data **b_stack)
 	*a_stack = tmp->next;
 	tmp->next = *b_stack;
 	*b_stack = tmp;
-	ft_putstr_fd("pb\n", 1);
 }
 
 void	ft_rev_rotate(t_data **stack)
@@ -57,20 +56,16 @@ void	ft_rotate(t_data **stack)
 	*stack = pmp;
 }
 
-void	ft_ra(t_data **a_stack, int a)
+void	ra_bonus(t_data **a_stack)
 {
 	if (!a_stack)
 		return ;
 	ft_rotate(a_stack);
-	if (a == 0)
-		ft_putstr_fd("ra\n", 1);
 }
 
-void	ft_rb(t_data **b_stack, int a)
+void	rb_bonus(t_data **b_stack)
 {
 	if (!b_stack)
 		return ;
 	ft_rotate(b_stack);
-	if (a == 0)
-		ft_putstr_fd("rb\n", 1);
 }

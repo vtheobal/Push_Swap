@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	best_way(t_data **a_stack, t_data **b_stack, t_info *info)
 {

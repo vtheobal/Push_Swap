@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int	midpoint(int a)
 {
@@ -86,9 +86,7 @@ void	sort_big(t_data **a_stack, t_data **b_stack)
 {
 	t_info	*info;
 	int		cnt;
-	int		a;
 
-	a = 3;
 	info = info_init();
 	cnt = ft_lstsize(*a_stack);
 	while (cnt)

@@ -1,16 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   checker.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vtheobal <vtheobal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/01 11:41:06 by vtheobal          #+#    #+#             */
-/*   Updated: 2021/10/03 16:21:23 by vtheobal         ###   ########.fr       */
+/*   Created: 2021/10/02 17:17:16 by vtheobal          #+#    #+#             */
+/*   Updated: 2021/10/03 16:33:28 by vtheobal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
+
+void	ft_buf_null(char *buf)
+{
+	buf[0] = '\0';
+	buf[1] = '\0';
+	buf[2] = '\0';
+	buf[3] = '\0';
+	buf[4] = '\0';
+}
 
 int	main(int argc, char **argv)
 {
@@ -27,11 +36,11 @@ int	main(int argc, char **argv)
 			i++;
 		}
 		indexing(&a_stack);
+		reader(&a_stack, &b_stack);
 		if (!sort_check(&a_stack))
-			exit(0);
-		sequence(&a_stack);
-		sort_boll_1(&a_stack);
-		ft_algo(&a_stack, &b_stack);
+			ft_putstr_fd("OK\n", 1);
+		else
+			ft_putstr_fd("KO\n", 1);
 	}
 	return (0);
 }

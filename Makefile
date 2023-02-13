@@ -2,34 +2,35 @@ NAME		=	push_swap
 
 NAME_B  	=	checker
 
-SRCS		= 	ft_atoi.c\
-				ft_putchar_fd.c\
-				ft_putstr_fd.c\
-				ft_split.c main.c\
-				ft_list.c\
-				ft_swap_function_1.c\
-				ft_swap_function_2.c\
-				ft_swap_function_3.c\
-				ft_swap_function_4.c\
-				ft_indexing.c\
-				ft_sort_boll_1.c\
-				ft_algo_three_five.c\
-				ft_sort_big_1.c\
-				ft_sort_big_2.c\
+SRCS		= 	src/main.c\
+				src/ft_atoi.c\
+				src/ft_putchar_fd.c\
+				src/ft_putstr_fd.c\
+				src/ft_split.c\
+				src/ft_list.c\
+				src/ft_swap_function_1.c\
+				src/ft_swap_function_2.c\
+				src/ft_swap_function_3.c\
+				src/ft_swap_function_4.c\
+				src/ft_indexing.c\
+				src/ft_sort_boll_1.c\
+				src/ft_algo_three_five.c\
+				src/ft_sort_big_1.c\
+				src/ft_sort_big_2.c\
 
-SRCS_B		= 	checker.c\
-				checker_dop.c\
-				ft_atoi.c\
-				ft_putchar_fd.c\
-				ft_putstr_fd.c\
-				ft_split.c\
-				ft_list.c\
-				ft_swap_function_1_bonus.c\
-				ft_swap_function_2_bonus.c\
-				ft_swap_function_3_bonus.c\
-				ft_swap_function_4.c\
-				ft_indexing.c\
-				ft_sort_boll_1.c\
+SRCS_B		= 	src/checker.c\
+				src/checker_dop.c\
+				src/ft_atoi.c\
+				src/ft_putchar_fd.c\
+				src/ft_putstr_fd.c\
+				src/ft_split.c\
+				src/ft_list.c\
+				src/ft_swap_function_1_bonus.c\
+				src/ft_swap_function_2_bonus.c\
+				src/ft_swap_function_3_bonus.c\
+				src/ft_swap_function_4.c\
+				src/ft_indexing.c\
+				src/ft_sort_boll_1.c\
 
 
 OBJS		= 	$(patsubst %.c,%.o,$(SRCS))
